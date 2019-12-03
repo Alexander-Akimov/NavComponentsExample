@@ -8,7 +8,7 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.akimov.navcomponentsexapmpl.MainFragment"
+        android:name="com.akimov.navcomponentsexample.MainFragment"
         android:label="fragment_main"
         tools:layout="@layout/fragment_main">
         <action
@@ -33,37 +33,63 @@
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right" />
     </fragment>
+
     <fragment
         android:id="@+id/chooseRecipientFragment"
-        android:name="com.akimov.navcomponentsexapmpl.ChooseRecipientFragment"
+        android:name="com.akimov.navcomponentsexample.ChooseRecipientFragment"
         android:label="fragment_choose_recipient"
         tools:layout="@layout/fragment_choose_recipient">
+
         <action
             android:id="@+id/action_chooseRecipientFragment_to_specifyAmountFragment"
-            app:destination="@id/specifyAmountFragment" />
+            app:destination="@id/specifyAmountFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
-    <fragment
-        android:id="@+id/confirmationFragment"
-        android:name="com.akimov.navcomponentsexapmpl.ConfirmationFragment"
-        android:label="fragment_confirmation"
-        tools:layout="@layout/fragment_confirmation" />
+
     <fragment
         android:id="@+id/specifyAmountFragment"
-        android:name="com.akimov.navcomponentsexapmpl.SpecifyAmountFragment"
+        android:name="com.akimov.navcomponentsexample.SpecifyAmountFragment"
         android:label="fragment_specify_amount"
         tools:layout="@layout/fragment_specify_amount">
+
+        <argument android:name="recipient"
+            android:defaultValue="None"/>
+
         <action
             android:id="@+id/action_specifyAmountFragment_to_confirmationFragment"
-            app:destination="@id/confirmationFragment" />
+            app:destination="@id/confirmationFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
+
+    <fragment
+        android:id="@+id/confirmationFragment"
+        android:name="com.akimov.navcomponentsexample.ConfirmationFragment"
+        android:label="fragment_confirmation"
+        tools:layout="@layout/fragment_confirmation">
+
+        <argument android:name="recipient"
+            android:defaultValue="None"/>
+
+        <argument android:name="amount"
+            app:argType="com.akimov.navcomponentsexample.Money"/>
+
+    </fragment>
+
     <fragment
         android:id="@+id/viewBalanceFragment"
-        android:name="com.akimov.navcomponentsexapmpl.ViewBalanceFragment"
+        android:name="com.akimov.navcomponentsexample.ViewBalanceFragment"
         android:label="fragment_view_balance"
         tools:layout="@layout/fragment_view_balance" />
+
     <fragment
         android:id="@+id/viewTransactionFragment"
-        android:name="com.akimov.navcomponentsexapmpl.ViewTransactionFragment"
+        android:name="com.akimov.navcomponentsexample.ViewTransactionFragment"
         android:label="fragment_view_transaction"
         tools:layout="@layout/fragment_view_transaction" />
 </navigation>

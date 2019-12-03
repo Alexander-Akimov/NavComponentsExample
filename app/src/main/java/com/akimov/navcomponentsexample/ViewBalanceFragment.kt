@@ -1,4 +1,4 @@
-package com.akimov.navcomponentsexapmpl
+package com.akimov.navcomponentsexample
 
 
 import android.os.Bundle

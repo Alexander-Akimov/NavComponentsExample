@@ -1,4 +1,4 @@
-package com.akimov.navcomponentsexapmpl
+package com.akimov.navcomponentsexample
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

@@ -6,4 +6,5 @@
     <string name="next">next</string>
     <string name="cancel">cancel</string>
     <string name="name">Name</string>
+    <string name="confirm_message">$1 was sent to Mitch</string>
 </resources>
